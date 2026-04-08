@@ -1,28 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Home | La Plaza Tacos</title>
     <link rel="stylesheet" href="style.css">
-    <title>Los Cotija's | Home</title>
 </head>
-<body>
-    <header>
-        <img src="logo.png" alt="Swimming Taco Logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="catering.html">Catering</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
+<body class="parallax-wrapper">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="catering.html">Catering</a>
+        <a href="about.html">About</a>
+    </nav>
 
-    <div class="container" style="text-align:center;">
-        <h1>OC'S BEST FISH TACO</h1>
-        <p>Fresh from the ocean, straight to the tortilla.</p>
-        <div class="gallery">
-            <img src="food1.png" width="300">
-            <img src="food14.png" width="300">
-            <img src="food15.png" width="300">
+    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800" class="bg-logo" id="mainLogo">
+
+    <section>
+        <h1 style="font-size: 3rem; text-align: center; margin-bottom: 100px;">La Plaza Tacos</h1>
+        
+        <div class="content-row">
+            <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=500" alt="Fresh Tortillas">
+            <p>Our tortillas are made using ancient nixtamalization techniques. We grind the corn fresh every morning to ensure that every taco has a soft, fragrant base that holds up to our juicy fillings.</p>
         </div>
-    </div>
+
+        <div class="content-row">
+            <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=500" alt="Al Pastor">
+            <p>The Al Pastor is our crown jewel. Marinated in achiote and pineapple juice, the pork is sliced thin and caramelized on the trompo until it reaches crispy perfection.</p>
+        </div>
+
+        <div class="content-row">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500" alt="Spices">
+            <p>Flavor is our priority. We import our dried chilies directly from Oaxaca, creating complex moles and salsas that balance heat with deep, earthy sweetness.</p>
+        </div>
+
+        <div class="content-row">
+            <img src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=500" alt="Drinks">
+            <p>Nothing pairs better with spicy salsa than our Horchata. Made with toasted rice, cinnamon, and a hint of vanilla, it’s the ultimate refreshing finish to your meal.</p>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const logo = document.getElementById('mainLogo');
+            let opacity = 0.1 + (window.scrollY / 800);
+            logo.style.opacity = Math.min(opacity, 0.9);
+        });
+    </script>
 </body>
 </html>
