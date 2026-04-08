@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Catering | La Plaza Tacos</title>
     <link rel="stylesheet" href="style.css">
-    <title>Catering & Locations</title>
 </head>
 <body>
-    <header>
-        <h1>Find Us & Catering</h1>
-        <nav><a href="index.html">Home</a> | <a href="menu.html">Menu</a> | <a href="catering.html">Catering</a> | <a href="about.html">About</a></nav>
-    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="catering.html">Catering</a>
+        <a href="about.html">About</a>
+    </nav>
 
-    <div class="container">
-        <h2>Location 1</h2>
-        <div class="map-section">
-            <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen=""></iframe>
-            <img src="location1-exterior.jpg" width="400" alt="Street view of shop">
+    <div class="cat-container">
+        <div class="catering-group bg-black">
+            <div class="img-stack">
+                <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=500" alt="Event 1">
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04cb21c7?w=500" alt="Event 2">
+            </div>
+            <div class="text-side">
+                <h2 style="color: var(--mexican-red);">Corporate Catering</h2>
+                <p>Elevate your office lunch or company milestone. Our taco bars are designed for efficiency and flavor, allowing your team to build their own masterpieces with premium meats and toppings.</p>
+                <p><strong>Contact:</strong> events@laplazatacos.com</p>
+            </div>
         </div>
-        
-        <h2>Catering Inquiry</h2>
-        <form>
-            <input type="text" placeholder="Your Name"><br><br>
-            <textarea placeholder="Event Details"></textarea><br>
-            <button type="submit">Send Request</button>
-        </form>
+
+        <div class="catering-group bg-white">
+            <div class="img-stack">
+                <img src="https://images.unsplash.com/photo-1467453278243-7a7192842367?w=500" alt="Event 3">
+                <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=500" alt="Event 4">
+            </div>
+            <div class="text-side">
+                <h2>Weddings & Private Fiastas</h2>
+                <p>Let us bring the heat to your special day. From backyard birthdays to elegant weddings, our staff provides professional service with a warm, family-oriented touch.</p>
+                <p><strong>Call Us:</strong> (555) 123-TACO</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
