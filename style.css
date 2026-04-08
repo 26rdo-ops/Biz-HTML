@@ -1,185 +1,118 @@
-/* Color Palette: Teal #A9D6E5, Taco Yellow #F2C94C, Deep Navy #1D3557 */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background-color: #fdfcf0;
-    color: #333;
+:root {
+    --mexican-red: #CE1126;
+    --mexican-green: #006847;
+    --light-blue: #e0f7fa;
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
-header {
-    background-color: #A9D6E5;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 5px solid #F2C94C;
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #fff;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
 }
 
 nav a {
-    margin: 0 15px;
+    color: white;
     text-decoration: none;
-    color: #1D3557;
+    margin: 0 20px;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.hero-gif {
-    width: 300px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
+nav a:hover { color: var(--mexican-red); }
+
+section { padding: 100px 10% 60px; min-height: 80vh; }
+
+/* HOME PAGE SPECIFIC */
+.parallax-wrapper {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 60%, var(--light-blue) 100%);
 }
 
-.container {
-    padding: 40px;
-    max-width: 1200px;
-    margin: auto;
+.bg-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    z-index: -1;
+    opacity: 0.1;
+    transition: opacity 0.1s linear;
 }
 
-/* Menu Grid */
+.content-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.content-row img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 40px;
+    border-radius: 8px;
+}
+
+/* MENU PAGE SPECIFIC */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding-top: 40px;
 }
 
-.menu-item {
+.menu-card {
     background: white;
-    border: 2px solid #F2C94C;
     border-radius: 15px;
-    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px var(--card-shadow);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
     text-align: center;
 }
 
-.menu-item img {
-    width: 100%;
-    border-radius: 10px;
+.menu-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.price {
-    color: #2a9d8f;
-    font-weight: bold;
-    display: block;
-}
+.menu-card img { width: 100%; height: 200px; object-fit: cover; }
+.menu-card h3 { margin: 15px 0 5px; color: var(--black); }
+.price { color: var(--mexican-green); font-weight: bold; font-size: 1.3rem; margin-bottom: 20px; display: block; }
 
-footer {
-    background: #1D3557;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-}
-/* 1. Add a subtle 'Paper/Stucco' texture to the background */
-body {
-  background-color: #fcfaf2; /* Keeping your cream base */
-  background-image: url("https://www.transparenttextures.com/patterns/p6.png"); /* Subtle grain */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-}
+/* CATERING PAGE SPECIFIC */
+.cat-container { padding: 0; margin-top: 50px; }
+.catering-group { display: flex; padding: 80px 10%; align-items: center; }
+.bg-black { background-color: var(--black); color: white; }
+.bg-white { background-color: var(--white); color: var(--black); }
+.img-stack { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.img-stack img { width: 90%; height: 250px; object-fit: cover; border-radius: 8px; }
+.text-side { flex: 1; padding-left: 50px; }
 
-/* 2. Make the Header pop with a 'Sunset' gradient */
-header {
-  background: linear-gradient(180deg, #99d5e7 0%, #7db9cb 100%);
-  border-bottom: 5px solid #ffcc00; /* Gold accent line */
-  padding: 20px 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* 3. Give the Headline some 'Sign-Painter' energy */
-h1 {
-  font-family: 'Georgia', serif; /* Or a bold Google Font like 'Bebas Neue' */
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #2c3e50;
-  text-shadow: 2px 2px 0px #ffcc00; /* Retro shadow effect */
-  margin-top: 40px;
-}
-
-/* 4. The Photo Gallery: From a boring row to a 'Polaroid' scatter */
-.photo-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 50px 20px;
-  perspective: 1000px;
-}
-
-.photo-container img {
-  border: 10px solid white;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 300px;
-}
-
-/* Tilt the side images slightly for a 'tossed on a table' look */
-.photo-container img:nth-child(1) { transform: rotate(-3deg); }
-.photo-container img:nth-child(2) { transform: scale(1.1); z-index: 2; } /* Center image pops */
-.photo-container img:nth-child(3) { transform: rotate(3deg); }
-
-/* Hover effect: Make the taco "come to you" */
-.photo-container img:hover {
-  transform: scale(1.15) rotate(0deg) !important;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-  z-index: 10;
-  cursor: pointer;
-}
-
-/* 5. Add a 'Neon' Call to Action Button */
-.cta-button {
-  background-color: #ff4d4d; /* Salsa Red */
-  color: white;
-  padding: 15px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 10px #ff4d4d;
-  transition: 0.3s;
-}
-
-.cta-button:hover {
-  box-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff4d4d;
-  background-color: #ff3333;
-}
-/* 1. The Main Background: A subtle Talavera Tile Pattern */
-body {
-  background-color: #fdf5e6; 
-  /* Using a subtle geometric pattern reminiscent of Mexican tiles */
-  background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png"), 
-                    linear-gradient(rgba(253, 245, 230, 0.9), rgba(253, 245, 230, 0.9)),
-                    url('https://www.transparenttextures.com/patterns/mexican-tile.png');
-  font-family: 'Montserrat', sans-serif;
-  color: #4a2c2a; /* Deep cocoa brown instead of harsh black */
-}
-
-/* 2. The Header: 'Papel Picado' Inspired Edge */
-header {
-  background-color: #00a1c1; /* Vibrant Mexican Blue */
-  padding: 40px 0 60px 0;
-  position: relative;
-  /* This creates a scalloped 'cut-paper' effect at the bottom */
-  mask-image: radial-gradient(circle at 20px 100%, transparent 20px, white 21px);
-  mask-size: 40px 100%;
-  -webkit-mask-image: radial-gradient(circle at 20px 100%, transparent 20px, white 21px);
-  -webkit-mask-size: 40px 100%;
-}
-
-/* 3. The Headline: Traditional 'Rotulismo' Style */
-h1 {
-  font-family: 'Abril Fatface', serif;
-  font-size: 3.5rem;
-  color: #d32f2f; /* Chili Red */
-  text-align: center;
-  text-transform: uppercase;
-  /* Multi-layered shadow for a hand-painted look */
-  text-shadow: 2px 2px 0px #fff, 4px 4px 0px #ffcc00; 
-  margin-bottom: 10px;
-}
-
-/* 4. Decorative 'Serape' Divider */
-.divider {
-  height: 8px;
-  width: 100%;
-  background: linear-gradient(to right, 
-    #d32f2f 20%, #ffcc00 20%, #ffcc00 40%, 
-    #4caf50 40%, #4caf50 60%, #00a1c1 60%, 
-    #00a1c1 80%, #9c27b0 80%);
+/* ABOUT PAGE SPECIFIC */
+.about-row { display: flex; margin-bottom: 60px; align-items: center; }
+.about-row img { width: 45%; height: 300px; object-fit: cover; border-radius: 10px; margin-right: 50px; }
+.about-row p { font-size: 1.1rem; line-height: 1.8; color: #444; }
   margin: 20px 0;
 }
